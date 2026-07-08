@@ -5,9 +5,9 @@ defaults:
     shell: bash
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - LPAL-2236-test-rewrite
 
 permissions:
   actions: none
