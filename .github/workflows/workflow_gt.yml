@@ -30,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
-          ref: LPAL-2236-test-rewrite
+          fetch-depth: 0
           fetch-tags: true
       - name: Bump version and push tag
         uses: ministryofjustice/opg-github-actions/actions/semver@83663a5235330cc2193319b25d559885610c6bd5 # v4.8.4
@@ -38,4 +38,5 @@ jobs:
         with:
           prerelease: true
           create_release: false
+          default_branch: LPAL-2236-test-rewrite
           default_bump: minor
